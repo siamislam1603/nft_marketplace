@@ -1,5 +1,11 @@
-const Home = () => {
-  return <div></div>
-}
+import Banner from "./Banner/Banner";
 
-export default Home
+const Home = () => {
+  return (
+    <>
+      <Banner />
+    </>
+  );
+};
+
+export default Home;

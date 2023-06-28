@@ -10,7 +10,7 @@ export const NavbarStyled = styled(AppBar)(
     .MuiToolbar-root{
         gap: ${theme.spacing(3)};
         align-items:center;
-        ${theme.breakpoints.down('sm')}{
+        ${theme.breakpoints.down("sm")}{
             gap:${theme.spacing(1)};
         }
     }
@@ -22,7 +22,7 @@ export const NavbarStyled = styled(AppBar)(
         text-transform:initial;
         .MuiButton-startIcon{
             margin:0;
-            ${theme.breakpoints.up('md')}{
+            ${theme.breakpoints.up("md")}{
                 display:none;
             }
         }
@@ -30,7 +30,7 @@ export const NavbarStyled = styled(AppBar)(
             flex-direction:column;
             border-radius:0;
         }
-        ${theme.breakpoints.down('md')}{
+        ${theme.breakpoints.down("md")}{
             padding:5px;
         }
     }
@@ -41,6 +41,9 @@ export const MenuButtonStyled = styled(IconButton)(
   ({ theme }) => `
     background-color:${theme.palette.secondary.contrastText};
     color:black;
+    ${theme.breakpoints.up("lg")}{
+        display:none;
+    }
 `
 );
 
@@ -53,7 +56,7 @@ export const CompanyNameStyled = styled(Typography)(
     font-weight:${theme.typography.fontWeightBold};
     border-right:1px solid #F4F4F4;
     padding-right:${theme.spacing(3)};
-    ${theme.breakpoints.down('sm')}{
+    ${theme.breakpoints.down("sm")}{
         padding-right:${theme.spacing(2)};
     }
 `
