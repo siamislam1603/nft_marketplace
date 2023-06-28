@@ -1,0 +1,15 @@
+{
+  "sectionTitle": "The amazing NFT art of the world here",
+  "transactions": [
+    {
+      "img": "assets/images/fast-transaction.svg",
+      "title": "Fast Transaction",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus imperdiet."
+    },
+    {
+      "img": "assets/images/growth-transaction.svg",
+      "title": "Growth Transaction",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus"
+    }
+  ]
+}
