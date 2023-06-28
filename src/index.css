@@ -8,3 +8,9 @@
   font-family: 'Averta Demo PE Cutted Demo';
   src: url('../public/assets/fonts/AvertaDemoPECuttedDemo.ttf');
 }
+
+html{
+  @media only screen and (max-width: 599.98px){
+    font-size:14px;
+  }
+}

@@ -1,80 +1,100 @@
-import CloseIcon from '@mui/icons-material/Close'
-import MenuIcon from '@mui/icons-material/Menu'
-import UploadIcon from '@mui/icons-material/Upload'
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import AppsIcon from "@mui/icons-material/Apps";
+import UploadIcon from "@mui/icons-material/Upload";
 import {
+  Box,
   Button,
   Container,
-  IconButton,
-  InputBase,
+  Menu,
   Stack,
   Toolbar,
   useMediaQuery,
   useTheme,
-} from '@mui/material'
-import {useRef, useState} from 'react'
-import {RiSearch2Line} from 'react-icons/ri'
-import Modal from '../Modal'
-import MenuItems from './MenuItems'
-import {CompanyNameStyled, NavbarStyled, SearchFieldStyled} from './styles'
+} from "@mui/material";
+import { useRef, useState } from "react";
+import MenuItems from "./MenuItems";
+import SearchField from "./SearchField";
+import { CompanyNameStyled, MenuButtonStyled, NavbarStyled } from "./styles";
 
 const Header = () => {
-  const theme = useTheme()
-  const [modalVisible, setModalVisible] = useState(false)
-  const headerRef = useRef(null)
-  const handleModalClose = () => {
-    setModalVisible(false)
-  }
+  const theme = useTheme();
+  const headerRef = useRef(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <>
       <NavbarStyled ref={headerRef} elevation={0}>
         <Container maxWidth="xl">
-          <Toolbar sx={{py: 3}}>
+          <Toolbar sx={{ py: 3 }} variant="dense">
             <CompanyNameStyled>nfters</CompanyNameStyled>
-            {useMediaQuery(theme.breakpoints.up('lg')) ? <MenuItems /> : null}
+            {useMediaQuery(theme.breakpoints.up("lg")) ? <MenuItems /> : null}
             <Stack
               flexGrow={1}
               direction="row"
               justifyContent="end"
               alignItems="center"
-              spacing={3}
+              spacing={{ xs: 0, sm: 2, md: 3 }}
             >
-              <SearchFieldStyled elevation={0} component="form">
-                <InputBase sx={{ml: 1, flex: 1}} placeholder="Search" />
-                <IconButton type="button" sx={{p: '10px'}}>
-                  <RiSearch2Line />
-                </IconButton>
-              </SearchFieldStyled>
+              {useMediaQuery("(min-width:500px)") ? <SearchField /> : null}
               <Button
-                variant="contained"
+                variant={
+                  useMediaQuery(theme.breakpoints.up("md")) ? "contained" : ""
+                }
                 className="btns"
-                sx={{color: 'white'}}
+                sx={{ color: { md: "white" } }}
                 startIcon={<UploadIcon />}
               >
                 Upload
               </Button>
-              <Button variant="outlined" className="btns" color="primary">
-                Connect Wallet
+              <Button
+                startIcon={<AccountBalanceWalletIcon />}
+                variant={
+                  useMediaQuery(theme.breakpoints.up("md")) ? "outlined" : ""
+                }
+                className="btns"
+                color="primary"
+              >
+                Connect
+                <Box
+                  component="span"
+                  sx={{ display: { xs: "none", md: "block" } }}
+                >
+                  &nbsp;Wallet
+                </Box>
               </Button>
             </Stack>
-            <IconButton sx={{p: 0}} onClick={() => setModalVisible(!modalVisible)}>
-              {modalVisible ? <CloseIcon sx={{fontSize: 35}} /> : <MenuIcon sx={{fontSize: 35}} />}
-            </IconButton>
+            <MenuButtonStyled
+              id="header-menu-button"
+              aria-controls={open ? "header-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+            >
+              <AppsIcon sx={{ fontSize: 30 }} />
+            </MenuButtonStyled>
           </Toolbar>
         </Container>
       </NavbarStyled>
-
-      <Modal
-        open={modalVisible}
-        onClose={handleModalClose}
-        maskTop={(headerRef?.current?.clientHeight ?? 0) + 1 + 'px'}
-        modalContentStyle={{maxWidth: '100%',maxHeight:'80px',height:'80px',alignItems:'start'}}
+      <Menu
+        id="header-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "header-menu-button",
+        }}
       >
-        <Container maxWidth="xl">
-          <MenuItems />
-        </Container>
-      </Modal>
+        <MenuItems handleClick={handleClose} />
+      </Menu>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
