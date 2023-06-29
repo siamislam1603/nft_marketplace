@@ -1,0 +1,39 @@
+[
+  {
+    "img": "assets/images/top-collection-1.svg",
+    "title": "CryptoFunks",
+    "eth": "19,769.39",
+    "ratio": "+26.52%",
+    "ratioDeclined": false,
+    "isVerified":true
+  },
+  {
+    "img": "assets/images/top-collection-2.svg",
+    "title": "Cryptix",
+    "eth": "2,769.39",
+    "ratio": "+10.52%",
+    "ratioDeclined": true
+  },
+  {
+    "img": "assets/images/top-collection-3.svg",
+    "title": "Frensware",
+    "eth": "9,232.39",
+    "ratio": "+2.52%",
+    "ratioDeclined": false
+  },
+  {
+    "img": "assets/images/top-collection-4.svg",
+    "title": "PunkArt",
+    "eth": "3,769.39",
+    "ratio": "+1.52%",
+    "ratioDeclined": false,
+    "isVerified":true
+  },
+  {
+    "img": "assets/images/top-collection-5.svg",
+    "title": "Art Crypto",
+    "eth": "10,769.39",
+    "ratio": "+2.52%",
+    "ratioDeclined": true
+  }
+]
