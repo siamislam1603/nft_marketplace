@@ -37,7 +37,7 @@ const FeaturedCollections = () => {
                   ))}
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="h6" mt={3} mb={1} nowrap>
+                  <Typography variant="h6" mt={3} mb={1} noWrap={true}>
                     {collection.title}
                   </Typography>
                   <Grid container alignItems="center" spacing={2}>

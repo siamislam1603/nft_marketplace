@@ -44,7 +44,7 @@ const NFTs = () => {
                   </AvatarGroup>
                 </Box>
                 <Box px="5px">
-                  <Typography className="title" nowrap gutterBottom>
+                  <Typography className="title" noWrap gutterBottom>
                     {titles[Math.floor(Math.random() * titles.length)]}
                   </Typography>
                   <Stack
