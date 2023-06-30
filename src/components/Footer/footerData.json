@@ -1,0 +1,31 @@
+[
+  {
+    "sectionTitle": "nfters",
+    "sectionDescription": "The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.",
+    "socialImages": [
+      "assets/images/facebook.svg",
+      "assets/images/twitter.svg",
+      "assets/images/linkedin.svg"
+    ]
+  },
+  {
+    "sectionTitle": "market place",
+    "items": [
+      "All NFTs",
+      "New",
+      "Art",
+      "Sports",
+      "Utility",
+      "Music",
+      "Domain Name"
+    ]
+  },
+  {
+    "sectionTitle": "My Account",
+    "items": ["Profile", "Favorite", "My Collections", "Settings"]
+  },
+  {
+    "sectionTitle": "Stay in the loop",
+    "sectionDescription": "Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating NFTs."
+  }
+]
