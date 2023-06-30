@@ -1,0 +1,25 @@
+{
+  "categories": [
+    "All categories",
+    "Art",
+    "Celebrities",
+    "Gaming",
+    "Sport",
+    "Music",
+    "Crypto",
+    "All categories",
+    "Art",
+    "Celebrities",
+    "Gaming",
+    "Sport",
+    "Music",
+    "Crypto"
+  ],
+  "images": [
+    "assets/images/banner-1.svg",
+    "assets/images/banner-2.svg",
+    "assets/images/banner-3.svg",
+    "assets/images/collection-1.svg"
+  ],
+  "titles": ["ArtCrypto", "This NFT", "NameCrypto", "KingCrypto"]
+}
