@@ -1,0 +1,47 @@
+{
+  "sectionTitle": "Collection Featured NFTs",
+  "collections": [
+    {
+      "thumbnail": "assets/images/banner-1.svg",
+      "images": [
+        "assets/images/banner-2.svg",
+        "assets/images/banner-3.svg",
+        "assets/images/collection-1.svg"
+      ],
+      "title": "Amazing Collection",
+      "author": {
+        "img": "assets/images/author.svg",
+        "name": "Arkhan"
+      },
+      "totalItems": 54
+    },
+    {
+      "thumbnail": "assets/images/banner-2.svg",
+      "images": [
+        "assets/images/banner-1.svg",
+        "assets/images/banner-3.svg",
+        "assets/images/collection-1.svg"
+      ],
+      "title": "Amazing Collection",
+      "author": {
+        "img": "assets/images/author.svg",
+        "name": "Arkhan"
+      },
+      "totalItems": 54
+    },
+    {
+      "thumbnail": "assets/images/banner-3.svg",
+      "images": [
+        "assets/images/banner-2.svg",
+        "assets/images/banner-1.svg",
+        "assets/images/collection-1.svg"
+      ],
+      "title": "Amazing Collection",
+      "author": {
+        "img": "assets/images/author.svg",
+        "name": "Arkhan"
+      },
+      "totalItems": 54
+    }
+  ]
+}
